@@ -18,6 +18,12 @@
       "prompt": "這段文件裡有程式碼跟連結,幫我修標點但不要動到程式碼:「設定檔放在 `~/.config/app.json`(記得先備份),格式參考官網 https://example.com/docs。啟動指令是 `npm run dev`,預設跑在 port 3000;如果被佔用,改用 `PORT=4000 npm run dev` 就好。」",
       "expected_output": "括號、逗號、分號改全形；行內 code(`~/.config/app.json`、`npm run dev`、`PORT=4000 npm run dev`)與 URL 內部完全不動；port 3000 之類中英數之間補空格。",
       "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "這段技術文件幫我校對標點跟空格,不要拆壞產品名:「我們用 Vue3 跟 Vite 建前端,狀態管理是 Pinia;後端有 3 個微服務,部署在 AWS 上,檔案存 S3。也接了 Web3 錢包(支援 MetaMask)。」",
+      "expected_output": "逗號、分號、括號改全形；Vue3、Web3、S3 等英數字連寫的完整 token 不拆開（不可變成 Vue 3／Web 3／S 3）；3 個、AWS 上等真正的中↔英數邊界維持盤古之白。",
+      "files": []
     }
   ]
 }
