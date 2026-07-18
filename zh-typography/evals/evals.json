@@ -1,0 +1,23 @@
+{
+  "skill_name": "zh-typography",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "幫我校對這段 README 的標點,中英文混排看起來怪怪的:「這是一個用 React 寫的專案,支援 dark mode(深色模式),也整合了 GitHub OAuth。安裝很簡單:先 clone 下來,再跑 npm install 就好。有問題?開 issue 跟我說!」直接給我改好的版本。",
+      "expected_output": "中文句子的逗號、冒號、問號、驚嘆號、括號改全形；React、dark mode、GitHub OAuth、npm install 等英文詞與中文之間補半形空格；不改任何指令或英文詞本身。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "我在寫工程師自傳,這段幫我看一下排版跟標點:「我是一名前端工程師,熟悉 Vue3、TypeScript 跟 Vite。過去兩年在一間 SaaS 新創負責重構後台(從 Options API 遷移到 Composition API),也導入了 Vitest 做單元測試。我很喜歡把複雜的東西講清楚……工作之餘會寫技術部落格。」",
+      "expected_output": "全形逗號、句號、括號；Vue3/TypeScript/Vite/SaaS/Options API/Composition API/Vitest 與中文之間補盤古之白；刪節號維持全形 ……；技術名詞本身不動。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "這段文件裡有程式碼跟連結,幫我修標點但不要動到程式碼:「設定檔放在 `~/.config/app.json`(記得先備份),格式參考官網 https://example.com/docs。啟動指令是 `npm run dev`,預設跑在 port 3000;如果被佔用,改用 `PORT=4000 npm run dev` 就好。」",
+      "expected_output": "括號、逗號、分號改全形；行內 code(`~/.config/app.json`、`npm run dev`、`PORT=4000 npm run dev`)與 URL 內部完全不動；port 3000 之類中英數之間補空格。",
+      "files": []
+    }
+  ]
+}
