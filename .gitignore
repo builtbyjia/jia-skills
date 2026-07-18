@@ -4,3 +4,6 @@
 # 編輯器
 .vscode/
 .idea/
+
+# skill eval 執行產物（開發用，不追蹤）
+*-workspace/
